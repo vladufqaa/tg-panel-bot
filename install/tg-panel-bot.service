@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram panel bot for x-ui (tg-panel-bot)
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=/bin/bash /root/tg-panel-bot.sh
+EnvironmentFile=/root/.tg-panel-bot.env
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
